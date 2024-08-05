@@ -1,0 +1,19 @@
+<%- include('partials/header.ejs') %>
+<br><br>
+<h2 class="centerIt" style="color:red;" >Deleted Post</h2>
+<% if(locals.trash){ %>
+    <% trash.forEach((trash,index)=>{ %>
+      <div class="deleted">
+        <!-- <p>name:<%= index %></p> -->
+        <p>UserName:         <%= trash.name %> </p>
+        <p>Post: <br>   <%= trash.post %></p>
+        
+      </div>
+    <% }) %>
+  <% } %>
+
+
+
+
+
+<%- include('partials/footer.ejs') %>

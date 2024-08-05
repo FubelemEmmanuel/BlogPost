@@ -1,0 +1,25 @@
+<%- include('partials/header.ejs') %>
+<div class="card mt-3">
+    <div class="card-title text-center centerIt"><h4>Update  Post</h4></div>
+    <div class="card-body">
+        <form action="/postupdate" method="POST">
+            <div>
+                <label for="name">Your name</label>
+                <input type="text" name="name" class="form-control" value="<%= update.name %>">
+            </div>
+            <div>
+                <label for="name">Your Blog</label>
+                <textarea name="blog" id="" class="form-control"><%= update.post %></textarea>
+            
+            </div>
+         <input type="text" value="<%= id %>" name="postId" hidden readonly>
+            <div class="mt-2">
+                <input type="submit" class="btn btn-success">
+            </div>
+        </form>
+       
+    </div>
+</div>
+<hr>
+
+<%- include('partials/footer.ejs') %>

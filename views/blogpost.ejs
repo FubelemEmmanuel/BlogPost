@@ -1,0 +1,18 @@
+<%- include('partials/header.ejs') %>
+<br><br>
+<% if(locals.data){ %>
+    <% data.forEach((post,index)=>{ %>
+      <div class="divide">
+        <!-- <p>name:<%= index %></p> -->
+        <p>UserName:         <%= post.name %> <span><a href="/delete/<%= index %>" class="floatx btn btn-danger mt-3"><i class="fa-solid fa-trash"></i></a><a href="/update/<%= index %>/" class="flt btn btn-primarys mt-3 getindex"  >Edit</a> </span></p>
+        <p>Post: <br>   <%= post.post %><span></span></p>
+        
+      </div>
+    <% }) %>
+  <% } %>
+
+
+
+
+
+<%- include('partials/footer.ejs') %>
